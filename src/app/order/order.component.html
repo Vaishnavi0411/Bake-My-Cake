@@ -1,0 +1,83 @@
+<mat-card class="card">
+  <mat-card-content>
+    <div class="flex">
+      <div>
+        <img [src]="'../assets/images/' + mycake.id + '.jpg'" width="30%" height="30%">
+        <p>Cake: {{ mycake.cake_name }} | Price: ₹{{ mycake.price }}<br>
+          Weight: {{ mycake.weight }} | Quantity: {{ mycake.quantity }}</p>
+        <p class="total">Total: ₹{{ mycake.total }}</p>
+
+        <mat-form-field class="full-width">
+          <input matInput [(ngModel)]="myorder.orderDate" [matDatepicker]="picker" placeholder="Order Date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <form class="example-form">
+          <mat-form-field class="example-width">
+            <mat-label>Message</mat-label>
+            <input matInput #message maxlength="50" placeholder="Ex. Birthday Cake ..." type="text" name="message"
+              [(ngModel)]="myorder.message">
+            <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint>
+            <mat-hint align="end">{{message.value.length}} / 50</mat-hint>
+          </mat-form-field>
+        </form>
+
+      </div>
+
+      <div>
+        <form class="example-form">
+          <h2>Shipping Information</h2>
+
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td><mat-form-field class="example-full-width">
+                  <mat-label>First name</mat-label>
+                  <input matInput type="text" name="firstname" [(ngModel)]="myorder.firstname">
+                </mat-form-field></td>
+
+              <td><mat-form-field class="example-full-width">
+                  <mat-label>Last Name</mat-label>
+                  <input matInput type="text" name="lastname" [(ngModel)]="myorder.lastname">
+                </mat-form-field></td>
+            </tr>
+          </table>
+
+          <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Address</mat-label>
+              <textarea matInput placeholder="Ex. 100 Main St" type="text" name="address"
+                [(ngModel)]="myorder.address"></textarea>
+            </mat-form-field>
+          </p>
+
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td><mat-form-field class="example-full-width">
+                  <mat-label>City</mat-label>
+                  <input matInput placeholder="Ex. San Francisco" type="text" name="city" [(ngModel)]="myorder.city">
+                </mat-form-field></td>
+              <td><mat-form-field class="example-full-width">
+                  <mat-label>State</mat-label>
+                  <input matInput placeholder="Ex. California" type="text" name="state" [(ngModel)]="myorder.state">
+                </mat-form-field></td>
+            </tr>
+          </table>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Postal Code</mat-label>
+            <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043" type="text"
+              name="postalCode" [(ngModel)]="myorder.postalCode">
+            <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+          </mat-form-field>
+
+          <div>
+            <button mat-raised-button color="primary" [routerLink]="'/viewOneCake/' + mycake.id + '/order'+'/user-order'" (click)="placeOrder()">Place
+              Order</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

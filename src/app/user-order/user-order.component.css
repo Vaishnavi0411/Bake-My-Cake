@@ -1,0 +1,12 @@
+h2{
+    text-align: center;
+}
+*{
+    margin: 1%;   
+}
+
+.card{
+  border: 1px solid black ;
+  background-color: rgb(211, 249, 236);
+}
+  

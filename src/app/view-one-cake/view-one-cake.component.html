@@ -1,0 +1,23 @@
+<div id="cake-content">
+    <div id="cake-detail">
+        <h1 class="cakeName">{{ mycake.cake_name }}</h1>
+        <img src="../../assets/images/{{ mycake.id }}.jpg">
+    </div>
+
+    <div id="div-id">
+        <h3>Celebration in Every Slice</h3>
+        <h4>"Celebrate Life's Moments with our Divine Cake Selection!"</h4>
+        <p>Egg or Eggless: {{ mycake.eggoreggless }}</p>
+        <p>Cake Category: {{ mycake.category }}</p>
+        <p>Description: {{ mycake.description }}</p>
+        <p>Cake Price: ₹{{ mycake.price }}</p>
+        <p class="text">{{mycake.category}}</p>
+
+        <mat-card-actions>
+            <button class="cart-btn" style="background-color: rgb(255, 192, 90); color: black;"
+                [routerLink]="'/viewOneCake/' + mycake.id + '/order'" mat-raised-button >
+                BUY NOW
+            </button>
+        </mat-card-actions>
+    </div>
+</div>

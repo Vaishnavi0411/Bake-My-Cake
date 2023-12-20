@@ -1,0 +1,42 @@
+<div *ngIf="cakeOrders.length > 0;">
+    <h2>All Cakes Order</h2>
+    <table class="order-table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Cake Name</th>
+          <th>Email</th>
+          <th>Price</th>
+          <th>Order Date</th>
+          <th>Message</th>
+          <th>Quantity</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Postal Code</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of cakeOrders">
+          <td>{{ order.cakeid }}</td>
+          <td>{{ order.firstname}}</td>
+          <td>{{ order.lastname }}</td>
+          <td>{{ order.cakeName }}</td>
+          <td>{{ order.email }}</td>
+          <td>{{ order.price }}</td>
+          <td>{{ order.orderDate }}</td>
+          <td>{{ order.message }}</td>
+          <td>{{ order.quantity }}</td>
+          <td>{{ order.address }}</td>
+          <td>{{ order.city}}</td>
+          <td>{{ order.state }}</td>
+          <td>{{ order.postalCode}}</td>
+          <td>{{ order.total }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

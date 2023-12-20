@@ -1,0 +1,55 @@
+<div class="cake-image">
+
+<form #addcake="ngForm" (ngSubmit)="addCake()">
+  
+  <div id="form-id">
+   
+    <mat-card>
+      <mat-card-content>
+        <h3>Cake Information</h3>
+        <div *ngIf="isEditCake">
+          <mat-form-field>
+            <input matInput type="text" placeholder="Enter cake ID" name="id" [(ngModel)]="mycake.id" required>
+            <mat-error *ngIf="addcake.form.controls['id'].invalid && (addcake.form.controls['id'].dirty || addcake.form.controls['id'].touched)">
+              Cake ID is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Enter Cake Name" name="cake_name" [(ngModel)]="mycake.cake_name" required>
+            <mat-error *ngIf="addcake.form.controls['cake_name'].dirty || addcake.form.controls['cake_name'].touched">
+              Cake name is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Enter Cake Category" name="category" [(ngModel)]="mycake.category" required>
+            <mat-error *ngIf="addcake.form.controls['category'].dirty || addcake.form.controls['category'].touched">
+              Cake category is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Enter Cake Price" name="price" [(ngModel)]="mycake.price" required>
+            <mat-error *ngIf="addcake.form.controls['price'].dirty || addcake.form.controls['price'].touched">
+              Cake price is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <button [disabled]="!addcake.form.valid" mat-raised-button color="primary" type="submit">Submit</button>
+          <button mat-raised-button color="accent" type="reset">Clear</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</form>
+
+</div>
