@@ -9,7 +9,8 @@ import { CanComponentDeactivate } from '../services/cake.guard';
   templateUrl: './add-cake.component.html',
   styleUrls: ['./add-cake.component.css']
 })
-export class AddCakeComponent implements OnInit,CanComponentDeactivate {
+
+export class AddCakeComponent implements OnInit, CanComponentDeactivate {
   mycake: Cake = {
     id: 0,
     cake_name: '',
@@ -49,9 +50,8 @@ export class AddCakeComponent implements OnInit,CanComponentDeactivate {
     });
   }
 
-
   canClose(): boolean {
-    if (this.mycake.cake_name!=""||this.mycake.category!=""||this.mycake.price) {
+    if (this.mycake.cake_name != "" || this.mycake.category != "" || this.mycake.price) {
       return confirm('Changes you made may not be saved. Are you sure you want to leave?');
     } else {
       return true;

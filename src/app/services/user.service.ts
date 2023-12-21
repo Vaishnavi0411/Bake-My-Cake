@@ -18,6 +18,6 @@ export class UserService {
     return this.httpClient.get<User[]>("http://localhost:3000/users?email=" + email);
   }
   checkUsernameAndPassword(email: string, password: string) {
-    return this.httpClient.get<User[]>("http://localhost:3000/users?email=" + email +"&password=" + password);
+    return this.httpClient.get<User[]>("http://localhost:3000/users?email=" + email + "&password=" + password);
   }
 }

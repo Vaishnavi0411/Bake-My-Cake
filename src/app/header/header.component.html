@@ -11,10 +11,11 @@
         routerLink="addCake"><mat-icon>add_circle_outline</mat-icon> Add Cake</a>
       <a *ngIf="loginService.isAdminLoggedIn==true && loginService.isUserLoggedIn==false" mat-list-item
         routerLink="orderHistory"><mat-icon>history </mat-icon> Order History</a>
-
+        <a *ngIf="loginService.isAdminLoggedIn==false && loginService.isUserLoggedIn==true" mat-list-item [routerLink]="'/viewOneCake/' + mycake.id + '/order'+'/user-order'">
+          <mat-icon>history</mat-icon> Order History </a>
       <a *ngIf="!loginService.isUserLoggedIn&&!loginService.isAdminLoggedIn" mat-list-item routerLink="login">
         <mat-icon>account_circle</mat-icon> Login</a>
-      <a *ngIf="loginService.isUserLoggedIn||loginService.isAdminLoggedIn" mat-list-item routerLink="login">
+      <a *ngIf="loginService.isUserLoggedIn||loginService.isAdminLoggedIn" mat-list-item (click)="logout()" routerLink="login">
         <mat-icon>logout</mat-icon> LogOut</a>
     </mat-nav-list>
 
@@ -36,7 +37,7 @@
           routerLink="login">account_box</mat-icon>
       </div>
     </mat-toolbar>
-    <!-- Add Content Here -->
+
     <router-outlet></router-outlet>
 
     <app-footer></app-footer>

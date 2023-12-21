@@ -22,7 +22,6 @@
             <mat-hint align="end">{{message.value.length}} / 50</mat-hint>
           </mat-form-field>
         </form>
-
       </div>
 
       <div>
@@ -72,7 +71,8 @@
           </mat-form-field>
 
           <div>
-            <button mat-raised-button color="primary" [routerLink]="'/viewOneCake/' + mycake.id + '/order'+'/user-order'" (click)="placeOrder()">Place
+            <button mat-raised-button color="primary"
+              [routerLink]="'/viewOneCake/' + mycake.id + '/order'+'/user-order'" (click)="placeOrder()">Place
               Order</button>
           </div>
         </form>

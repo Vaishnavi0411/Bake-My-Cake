@@ -4,9 +4,8 @@
   <app-search (searchedText)="searchTitle($event)"></app-search>
 
   <mat-grid-list cols="4" rowHeight="450px">
-
     <mat-grid-tile *ngFor="let cake of cakesData">
-      <mat-card  routerLink="viewOneCake/{{cake.id}}" class="dashboard-card">
+      <mat-card class="dashboard-card">
         <mat-card-header>
           <mat-card-title>
             <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
@@ -19,12 +18,11 @@
               <button *ngIf="loginService.isAdminLoggedIn==true && loginService.isUserLoggedIn==false" mat-menu-item
                 (click)="delete(cake.id)">Delete </button>
             </mat-menu>
-
           </mat-card-title>
         </mat-card-header>
-        <mat-card-content class="dashboard-card-content" >
-          <span class="text-center">{{cake.cake_name}}</span>
 
+        <mat-card-content class="dashboard-card-content">
+          <span class="text-center">{{cake.cake_name}}</span>
           <img class="img" src="../../assets/images/{{cake.id}}.jpg" width="100%" height="57%">
           <img src="../assets/images/rating.jpg" alt="rating" />{{
           cake?.rating
@@ -32,14 +30,12 @@
           <p class="text">Price : ₹{{cake.price}}</p>
           <mat-card-subtitle id="delivery">Earliest Delivery:
             <span class="span-tag">{{ cake?.earliestDelivery }}</span></mat-card-subtitle>
-
           <mat-card-actions>
-            <mat-icon routerLink="viewOneCake/{{cake.id}}" class="cart-icon" color="primary"
+            <mat-icon  routerLink="viewOneCake/{{cake.id}}" class="cart-icon" color="primary"
               matTooltip="Add to cart">shopping_cart</mat-icon>
           </mat-card-actions>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
-
   </mat-grid-list>
 </div>

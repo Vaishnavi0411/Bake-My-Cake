@@ -15,29 +15,35 @@
   top: 0;
   z-index: 1;
 }
-.a-cake{
+
+.a-cake {
   margin-left: 5px;
 }
+
 #header {
   display: flex;
   justify-content: space-between;
   background-color: rgb(159, 230, 255);
 }
-.divtag{
-margin: 10px; 
+
+.divtag {
+  margin: 10px;
 }
-.nav-list{
+
+.nav-list {
   font-size: large;
   font-weight: bold;
   margin-left: 4%;
 }
-.h1tag{
+
+.h1tag {
   font-size: larger;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bold;
   margin-left: 2%;
 }
-.userName{
+
+.userName {
   color: rgb(116, 116, 233);
   font-family: italic;
   font-size: large;
@@ -45,10 +51,6 @@ margin: 10px;
   margin-left: 4%;
 }
 
-#logo{
+#logo {
   text-align: center;
 }
-
-
-
-

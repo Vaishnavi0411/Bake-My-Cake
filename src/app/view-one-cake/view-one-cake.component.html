@@ -13,9 +13,9 @@
         <p>Cake Price: ₹{{ mycake.price }}</p>
         <p class="text">{{mycake.category}}</p>
 
-        <mat-card-actions>
+        <mat-card-actions  *ngIf="loginService.isAdminLoggedIn==false && loginService.isUserLoggedIn==true">
             <button class="cart-btn" style="background-color: rgb(255, 192, 90); color: black;"
-                [routerLink]="'/viewOneCake/' + mycake.id + '/order'" mat-raised-button >
+                [routerLink]="'/viewOneCake/' + mycake.id + '/order'" mat-raised-button>
                 BUY NOW
             </button>
         </mat-card-actions>

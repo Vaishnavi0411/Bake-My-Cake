@@ -20,6 +20,8 @@
       "price": 250,
       "image_url": "Black_forest_cake.jpg",
       "category": "Specialty Cake",
+      "total": 250,
+      "quantity": 1,
       "eggoreggless": "Eggless",
       "rating": 4,
       "earliestDelivery": "Today",
@@ -136,6 +138,12 @@
       "total": 20,
       "weight": 2,
       "description": "An indulgent eggless chocolate fudge cake featuring layers of rich chocolate cake and velvety chocolate fudge frosting. Temptation Meets Tradition: Find Your Perfect Cake Creation Here!"
+    },
+    {
+      "id": 11,
+      "cake_name": "mkmkfgfghf",
+      "price": 0,
+      "category": "nk"
     }
   ],
   "users": [
@@ -303,7 +311,7 @@
       "firstname": "shrusti",
       "lastname": "Chaudhari",
       "address": "71,shhiv hihar colony nagpur",
-      "message": "hii",
+      "message": "Birthday cake",
       "city": "Nagpur",
       "state": "Maharashtra",
       "postalCode": "44003",
@@ -321,7 +329,7 @@
       "firstname": "vartika",
       "lastname": "moon",
       "address": "71,shhiv hihar colony nagpur",
-      "message": "hii",
+      "message": "Special cake",
       "city": "Nagpur",
       "state": "Maharashtra",
       "postalCode": "44003",
@@ -335,6 +343,7 @@
       "price": 250,
       "cakeid": 2,
       "quantity": 1,
+      "total": 250,
       "firstname": "Meera",
       "lastname": "Kumari",
       "address": "84,shhiv hihar colony nagpur",
@@ -352,6 +361,7 @@
       "price": 250,
       "cakeid": 2,
       "quantity": 1,
+      "total": 250,
       "firstname": "Priyanka",
       "lastname": "Dhole",
       "address": "71,Sharda nagar ,colony nagpur",
@@ -361,6 +371,24 @@
       "postalCode": "44003",
       "orderDate": "2023-12-26T18:30:00.000Z",
       "id": 6
+    },
+    {
+      "email": "vaishnavi@1234gmail.com",
+      "username": "Vishakha",
+      "cakeName": "Wedding Cake",
+      "price": 200,
+      "cakeid": 1,
+      "quantity": 1,
+      "total": 200,
+      "firstname": "",
+      "lastname": "",
+      "address": "",
+      "message": "",
+      "city": "",
+      "state": "",
+      "postalCode": 0,
+      "orderDate": "",
+      "id": 7
     }
   ]
 }

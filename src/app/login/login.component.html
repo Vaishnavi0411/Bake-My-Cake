@@ -1,5 +1,5 @@
 <div class="cake-image">
-<div class="login-container">
+  <div class="login-container">
     <div class="login-form">
       <mat-card>
         <mat-card-content>
@@ -22,7 +22,8 @@
               <mat-error *ngIf="loginForm.controls['password'].errors?.['required']">
                 Password is required
               </mat-error>
-              <mat-error *ngIf="loginForm.controls['password'].errors?.['minlength'] && loginForm.controls['password'].dirty">
+              <mat-error
+                *ngIf="loginForm.controls['password'].errors?.['minlength'] && loginForm.controls['password'].dirty">
                 Password should be at least 6 characters long
               </mat-error>
             </mat-form-field>

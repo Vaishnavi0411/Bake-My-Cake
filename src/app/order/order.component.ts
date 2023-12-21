@@ -13,7 +13,7 @@ import { UserService } from '../services/user.service';
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
-  styleUrls: ['./order.component.css'] 
+  styleUrls: ['./order.component.css']
 })
 
 export class OrderComponent implements OnInit {
@@ -26,14 +26,14 @@ export class OrderComponent implements OnInit {
     quantity: 1,
     username: '',
     total: 0,
-    orderDate:'',
-    message:'',
-    firstname:'',
-    lastname:'',
-    address:'',
-    city:'',
-    state:'',
-    postalCode:0
+    orderDate: '',
+    message: '',
+    firstname: '',
+    lastname: '',
+    address: '',
+    city: '',
+    state: '',
+    postalCode: 0
 
   };
   mycake: Cake = {
@@ -47,7 +47,7 @@ export class OrderComponent implements OnInit {
     username: '',
     email: ''
   };
-orderDate: any;
+  orderDate: any;
 
   constructor(
     private cakeService: CakeService,
@@ -89,14 +89,14 @@ orderDate: any;
       cakeid: this.mycake.id,
       quantity: this.myorder.quantity,
       total: this.mycake.total,
-      firstname:this.myorder.firstname,
-      lastname:this.myorder.lastname,
-      address:this.myorder.address,
-      message:this.myorder.message,
-      city:this.myorder.city,
-      state:this.myorder.state,
-      postalCode:this.myorder.postalCode,
-      orderDate:this.myorder.orderDate
+      firstname: this.myorder.firstname,
+      lastname: this.myorder.lastname,
+      address: this.myorder.address,
+      message: this.myorder.message,
+      city: this.myorder.city,
+      state: this.myorder.state,
+      postalCode: this.myorder.postalCode,
+      orderDate: this.myorder.orderDate
     };
 
     this.orderService.placeOrder(order).subscribe(
@@ -104,7 +104,7 @@ orderDate: any;
         this.snackBar.open('Order placed successfully', 'Close', {
           duration: 3000,
           horizontalPosition: 'center',
-          verticalPosition:"bottom"
+          verticalPosition: "bottom"
         });
       },
       (error) => {

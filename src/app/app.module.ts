@@ -17,26 +17,25 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { AddCakeComponent } from './add-cake/add-cake.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ViewOneCakeComponent } from './view-one-cake/view-one-cake.component';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { SearchComponent } from './search/search.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { LayoutModule } from '@angular/cdk/layout';
-import {MatSelectModule} from '@angular/material/select';
-import {MatRadioModule} from '@angular/material/radio';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDialogModule } from '@angular/material/dialog';
 import { FooterComponent } from './footer/footer.component';
 import { OrderComponent } from './order/order.component';
 import { UserOrderComponent } from './user-order/user-order.component';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { OrderHistoryComponent } from './order-history/order-history.component';
-
 
 @NgModule({
   declarations: [
@@ -79,8 +78,6 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatTabsModule
-    
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

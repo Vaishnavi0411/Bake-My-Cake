@@ -1,16 +1,15 @@
 <div class="order-card">
   <h2>Order Details</h2>
-  <div class="card">
+  <div>
     <div class="card" *ngFor="let order of orders">
-      <p><strong>ID:</strong> {{ order.cakeid }}</p>
-      <p><strong>Name:</strong> {{ order.firstname }} {{ order.lastname }}</p>
-      <p><strong>Cake:</strong> {{ order.cakeName }}</p>
-      <p><strong>Email:</strong> {{ order.email }}</p>
-      <p><strong>Message:</strong> {{ order.message }}</p>
-      <p><strong>Order date:</strong> {{ order.orderDate}}</p>
-      <p><strong>Price:</strong> {{ order.price}}</p>
-      <p><strong>Address:</strong> {{ order.address }}</p>
-     </div>
+      <p>Name: {{ order.firstname }} {{ order.lastname }} </p>
+      <p>Email: {{ order.email }}</p>
+      <p>Cake: {{ order.cakeName }}</p>
+      <p>Cake Id: {{ order.cakeid }} | Price: {{ order.price}}</p>
+      <p>Message: {{ order.message }} | Order date: {{ order.orderDate}}</p>
+      <p>Address: {{ order.address }}</p>
+      <p>State: {{ order.state }} | Postal Code:{{ order.postalCode }}</p>
+    </div>
   </div>
 </div>
 

@@ -1,8 +1,9 @@
 #cake-content {
     display: flex;
-    margin-top: 2%;
+    margin-top: 1%;
     justify-content: center;
     align-items: flex-start;
+    margin-bottom: 5%;
 }
 
 #cake-detail {
@@ -10,23 +11,23 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding : 0 10px;
+    padding: 0 10px;
 }
 
 #cake-detail img {
     width: 80%;
     height: auto;
     margin: 2%;
-   
+
 }
 
 .cakeName {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2.1em;
-    color: #131213; 
-    text-align: center; 
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
+    color: #131213;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     margin-bottom: 20px;
     font-weight: 500;
 }
@@ -42,10 +43,10 @@
     box-shadow: 0 0 10px rgba(205, 194, 194, 0.531);
     text-align: center;
     padding: 2%;
-   
+
 }
 
-h3{
+h3 {
     font-size: 2em;
     color: #333;
     margin-bottom: 10px;
@@ -70,8 +71,9 @@ p {
     border: none;
     border-radius: 5px;
     padding: 1% 2%;
-    font-size: 1em; 
+    font-size: 1em;
 }
-p{
-    font-weight:500;
+
+p {
+    font-weight: 500;
 }

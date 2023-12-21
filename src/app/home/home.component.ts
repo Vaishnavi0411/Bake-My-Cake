@@ -12,11 +12,9 @@ import { LoginService } from '../services/login.service';
 export class HomeComponent implements OnInit {
   cakesData: Cake[] = [];
 
-  constructor(private cakeService: CakeService, private router: Router,public loginService:LoginService) {
-    // alert("Constructor of Home")
+  constructor(private cakeService: CakeService, private router: Router, public loginService: LoginService) {
   }
   ngOnInit(): void {
-    // alert("OnInit of Home");
     this.getAllCakes();
   }
   getAllCakes() {
@@ -26,7 +24,6 @@ export class HomeComponent implements OnInit {
 
   delete(id: any) {
     this.cakeService.deleteCake(id).subscribe(data => {
-      //  alert("Cake deleted");
       this.getAllCakes();
     })
   }
@@ -38,5 +35,4 @@ export class HomeComponent implements OnInit {
       );
     });
   }
-
 }

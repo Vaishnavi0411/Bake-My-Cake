@@ -10,7 +10,7 @@ import { OrderService } from '../services/order.service';
 export class OrderHistoryComponent {
   cakeOrders: cakeOrder[] = [];
 
-  constructor(private orderService: OrderService) {}
+  constructor(private orderService: OrderService) { }
 
   ngOnInit(): void {
     this.getCakeOrders();

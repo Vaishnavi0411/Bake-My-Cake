@@ -10,14 +10,15 @@ import { LoginService } from '../services/login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+
+  user = { email: '', password: '' };
+
   constructor(
     private userService: UserService,
     private loginService: LoginService,
     private snackBar: MatSnackBar,
     private router: Router
-  ) {}
-
-  user = { email: '', password: '' };
+  ) { }
 
   login() {
     this.userService.checkUsernameAndPassword(this.user.email, this.user.password).subscribe(
@@ -43,9 +44,9 @@ export class LoginComponent {
 
   openSnackBar(message: string) {
     this.snackBar.open(message, 'Close', {
-      duration: 3000, 
-      horizontalPosition: 'center', 
-      verticalPosition:'top' 
+      duration: 3000,
+      horizontalPosition: 'center',
+      verticalPosition: 'top'
     });
   }
 }

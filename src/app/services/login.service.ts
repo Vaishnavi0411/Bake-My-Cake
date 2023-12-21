@@ -31,6 +31,6 @@ export class LoginService {
     this.isUserLoggedIn = false
     this.userName = ""
     this.role = ""
-    this.email=""
+    this.email = ""
   }
 }

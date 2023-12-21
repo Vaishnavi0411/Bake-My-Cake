@@ -3,6 +3,7 @@ import { OrderService } from '../services/order.service';
 import { cakeOrder } from '../model/order';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
+import { Cake } from '../model/cake';
 
 @Component({
   selector: 'app-user-order',
@@ -13,7 +14,12 @@ export class UserOrderComponent {
 
   constructor(private orderService: OrderService, private rs: ActivatedRoute, private loginservice: LoginService, private router: Router) { }
   orders: cakeOrder[] = [];
-
+  mycake: Cake = {
+    id: 0,
+    cake_name: '',
+    price: 0,
+    weight: 0
+  };
   ngOnInit(): void {
     this.getOrderDetails();
   }
@@ -21,13 +27,7 @@ export class UserOrderComponent {
   getOrderDetails() {
     this.orderService.getOrdersByEmail(this.loginservice.email).subscribe((data) => {
       this.orders = data;
-      console.log(data);
-
     })
   }
-  back() {
-    this.router.navigateByUrl("home")
-  }
-
 }
 

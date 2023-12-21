@@ -11,61 +11,63 @@ import { cakeGuard } from './services/cake.guard';
 import { OrderComponent } from './order/order.component';
 import { UserOrderComponent } from './user-order/user-order.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
+import { userGuard } from './services/user.guard';
 
 const routes: Routes = [
   {
-    path : "",
-    component : HomeComponent
+    path: "",
+    component: HomeComponent
   },
   {
-    path : "addCake",
-    component : AddCakeComponent,
-    canActivate:[adminGuard],
+    path: "addCake",
+    component: AddCakeComponent,
+    canActivate: [adminGuard],
     canDeactivate: [cakeGuard]
   },
   {
-    path : "home",
-    redirectTo : ""
+    path: "home",
+    redirectTo: ""
   },
   {
-    path:"viewOneCake/:id", 
-    component:ViewOneCakeComponent
+    path: "viewOneCake/:id",
+    component: ViewOneCakeComponent
   },
   {
-    path:"editDetails/:id",
-    component:AddCakeComponent,
-    canActivate:[adminGuard]
+    path: "editDetails/:id",
+    component: AddCakeComponent,
+    canActivate: [adminGuard]
   },
   {
-    path:"orderHistory",
-    component:OrderHistoryComponent,
-    // canActivate:[adminGuard]
+    path: "orderHistory",
+    component: OrderHistoryComponent,
+    canActivate: [adminGuard]
   },
   {
-    path:" deleteDetails/:id", 
-    component:AddCakeComponent,
-    canActivate:[adminGuard]
+    path: " deleteDetails/:id",
+    component: AddCakeComponent,
+    canActivate: [adminGuard]
   },
   {
-    path:"register",
-    component:RegisterComponent,
-    canDeactivate:[cakeGuard]
+    path: "register",
+    component: RegisterComponent,
+    canDeactivate: [cakeGuard]
   },
   {
-    path:"login",
-    component:LoginComponent
+    path: "login",
+    component: LoginComponent
   },
   {
-    path : "viewOneCake/:id/order",
-    component : OrderComponent,
+    path: "viewOneCake/:id/order",
+    component: OrderComponent,
   },
   {
-    path:"viewOneCake/:id/order/user-order",
-    component:UserOrderComponent  
+    path: "viewOneCake/:id/order/user-order",
+    component: UserOrderComponent,
+    canActivate: [userGuard]
   },
   {
-    path:"**",//matches anything
-    component:PageNotFoundComponent
+    path: "**", //matches anything
+    component: PageNotFoundComponent
   }
 ];
 

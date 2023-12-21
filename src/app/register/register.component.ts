@@ -10,11 +10,11 @@ import { CanComponentDeactivate } from '../services/cake.guard';
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
-export class RegisterComponent implements CanComponentDeactivate{
+export class RegisterComponent implements CanComponentDeactivate {
 
-  constructor(private formbuilder: FormBuilder, private userserv: UserService,private snackBar: MatSnackBar ) { }
+  constructor(private formbuilder: FormBuilder, private userserv: UserService, private snackBar: MatSnackBar) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   title: string = "Registration Form";
   passwordPattern: any = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
@@ -22,16 +22,16 @@ export class RegisterComponent implements CanComponentDeactivate{
   registerForm = this.formbuilder.group({
     userName: ['', [Validators.required, Validators.minLength(2)]],
     password: ['', [Validators.required, Validators.pattern(this.passwordPattern)]],
-    confirmPassword:['',  [Validators.required, Validators.pattern(this.passwordPattern)]],
-    gender:[''],
+    confirmPassword: ['', [Validators.required, Validators.pattern(this.passwordPattern)]],
+    gender: [''],
     email: ['', [Validators.required, Validators.pattern(/^\S+@\S+\.\S+$/)]],
     phone: ['', [Validators.pattern(/^(\+\d{1,3}[- ]?)?\d{10}$/)]],
     role: ['user'],
-    address:this.formbuilder.group({
-      street:[''],
-      city:[''],
-      state:[''],
-      zipCode:['', [Validators.required,Validators.pattern("[0-9]{6}")]]
+    address: this.formbuilder.group({
+      street: [''],
+      city: [''],
+      state: [''],
+      zipCode: ['', [Validators.required, Validators.pattern("[0-9]{6}")]]
     })
   }, { validators: this.passwordCheck })
 
@@ -53,13 +53,11 @@ export class RegisterComponent implements CanComponentDeactivate{
     return this.registerForm.get("password");
   }
 
-  get confirmPassword()
-  {
+  get confirmPassword() {
     return this.registerForm.get("confirmPassword");
   }
-  
-  get gender()
-  {
+
+  get gender() {
     return this.registerForm.get("gender");
   }
 
@@ -70,23 +68,19 @@ export class RegisterComponent implements CanComponentDeactivate{
     return this.registerForm.get("phone");
   }
 
-  get street()
-  {
+  get street() {
     return this.registerForm.get("address.street");
   }
 
-  get city()
-  {
+  get city() {
     return this.registerForm.get("address.city");
   }
-  
-  get state()
-  {
+
+  get state() {
     return this.registerForm.get("address.state");
   }
 
-  get zipCode()
-  {
+  get zipCode() {
     return this.registerForm.get("address.zipCode");
   }
 
@@ -104,22 +98,22 @@ export class RegisterComponent implements CanComponentDeactivate{
       });
     }
   }
-  
+
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {
-      duration: 3000, 
-      horizontalPosition: 'center', 
-      verticalPosition:"top" 
+      duration: 3000,
+      horizontalPosition: 'center',
+      verticalPosition: "top"
     });
   }
-  
 
-  canClose(){
-    if(this.registerForm.dirty){
+
+  canClose() {
+    if (this.registerForm.dirty) {
       let response = confirm("Changes you made may not be saved.");
       return response;
     }
-    else{
+    else {
       return true;
     }
   }

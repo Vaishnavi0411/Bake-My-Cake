@@ -1,12 +1,22 @@
-h2{
-    text-align: center;
-}
-*{
-    margin: 1%;   
+h2 {
+  text-align: center;
 }
 
-.card{
-  border: 1px solid black ;
-  background-color: rgb(211, 249, 236);
+* {
+  margin: 1%;
 }
-  
+
+.card {
+  background-color: rgb(252, 254, 255);
+  padding: 1%;
+  box-shadow: 0 0 10px rgba(185, 182, 182, 0.531);
+  text-align: center;
+  margin-left: 13%;
+  margin-right: 13%;
+  border-radius: 10px;
+  margin-bottom: 2%;
+}
+
+.order-card{
+  margin-bottom: 50%;
+}

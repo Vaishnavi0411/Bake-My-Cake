@@ -13,7 +13,7 @@ export class OrderService {
   placeOrder(orderData: any): Observable<any> {
     return this.http.post<any>("http://localhost:3000/order", orderData);
   }
-  
+
   getCakeOrders(): Observable<cakeOrder[]> {
     return this.http.get<cakeOrder[]>("http://localhost:3000/order");
   }

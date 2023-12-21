@@ -3,15 +3,15 @@ import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTr
 import { Observable } from 'rxjs';
 import { LoginService } from './login.service';
 
-@Injectable({providedIn:'root'})
+@Injectable({ providedIn: 'root' })
 
-export class adminGuard implements CanActivate  {
-  constructor(private loginService:LoginService,private router:Router) {}
+export class adminGuard implements CanActivate {
+  constructor(private loginService: LoginService, private router: Router) { }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    if(this.loginService.isAdminLoggedIn){
+    if (this.loginService.isAdminLoggedIn) {
       return true;
     }
-    else{
+    else {
       this.router.navigateByUrl("login");
       return false;
     }
