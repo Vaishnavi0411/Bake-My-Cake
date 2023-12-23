@@ -1,20 +1,6 @@
 {
   "cakes": [
     {
-      "id": 1,
-      "cake_name": "Wedding Cake",
-      "price": 200,
-      "image_url": "Red_velvet.jpg",
-      "category": "Wedding Cake",
-      "eggoreggless": "Egg",
-      "rating": 4.5,
-      "earliestDelivery": "Today",
-      "quantity": 1,
-      "total": 200,
-      "weight": 2,
-      "description": "A cake featuring cherries, kirsch, and chocolate. Indulge in Sweet Delights: Discover Our Irresistible Cake Creations!"
-    },
-    {
       "id": 2,
       "cake_name": "Black Forest",
       "price": 250,
@@ -141,21 +127,21 @@
     },
     {
       "id": 11,
-      "cake_name": "mkmkfgfghf",
-      "price": 0,
-      "category": "nk"
+      "cake_name": "candy cake",
+      "price": "300",
+      "category": "Birthday Cake"
     }
   ],
   "users": [
     {
-      "name": "Administrator",
+      "userName": "Administrator",
       "email": "admin@gmail.com",
       "password": "Admin@1234",
       "role": "admin",
       "id": 1
     },
     {
-      "name": "Vishakha",
+      "userName": "Vishakha",
       "email": "vaishnavi@1234gmail.com",
       "password": "Red@1234",
       "confirmPassword": "Red@1234",
@@ -199,68 +185,20 @@
       "id": 6
     },
     {
-      "userName": "vaiad",
-      "password": "Red@3456",
-      "confirmPassword": "Red@3456",
+      "userName": "mahi",
+      "password": "Mahi@1234",
+      "confirmPassword": "Mahi@1234",
       "gender": "Female",
-      "email": "dfwf@123gmail.com",
-      "phone": "9878767678",
-      "role": "user",
-      "address": {
-        "street": "71,shhiv hihar colony nagpur",
-        "city": "Nagpur",
-        "state": "Maharashtra",
-        "zipCode": "440036"
-      },
-      "id": 7
-    },
-    {
-      "userName": "Meena",
-      "password": "Meena@1234",
-      "confirmPassword": "Meena@1234",
-      "gender": "Female",
-      "email": "Meena@12gmail.com",
-      "phone": "9878978789",
-      "role": "user",
-      "address": {
-        "street": "73,shhiv hihar colony nagpur",
-        "city": "Nagpur",
-        "state": "Maharashtra",
-        "zipCode": "440036"
-      },
-      "id": 8
-    },
-    {
-      "userName": "smeena",
-      "password": "Red@1234",
-      "confirmPassword": "Red@1234",
-      "gender": "Female",
-      "email": "smaeen@gmail.com",
-      "phone": "9898787899",
-      "role": "user",
-      "address": {
-        "street": "ajdhajd",
-        "city": "Nagpur",
-        "state": "Maharashtra",
-        "zipCode": "977999"
-      },
-      "id": 9
-    },
-    {
-      "userName": "etetet",
-      "password": "Red@1234",
-      "confirmPassword": "Red@1234",
-      "gender": "Female",
-      "email": "etgrg@gmail.com",
+      "email": "mahi@1234gmail.com",
       "phone": "9096526558",
       "role": "user",
       "address": {
-        "street": "71,shhiv hihar colony nagpur",
+        "street": "df",
         "city": "Nagpur",
         "state": "Maharashtra",
-        "zipCode": "440036"
+        "zipCode": "323432"
       },
-      "id": 10
+      "id": 12
     }
   ],
   "order": [
@@ -375,19 +313,19 @@
     {
       "email": "vaishnavi@1234gmail.com",
       "username": "Vishakha",
-      "cakeName": "Wedding Cake",
-      "price": 200,
-      "cakeid": 1,
+      "cakeName": "Black Forest",
+      "price": 250,
+      "cakeid": 2,
       "quantity": 1,
-      "total": 200,
-      "firstname": "",
-      "lastname": "",
-      "address": "",
-      "message": "",
-      "city": "",
-      "state": "",
-      "postalCode": 0,
-      "orderDate": "",
+      "total": 250,
+      "firstname": "Shivani",
+      "lastname": "Chaudhari",
+      "address": "71,shhiv hihar colony nagpur",
+      "message": "Birthday Cake",
+      "city": "Nagpur",
+      "state": "Maharashtra",
+      "postalCode": "44003",
+      "orderDate": "2023-12-27T18:30:00.000Z",
       "id": 7
     }
   ]

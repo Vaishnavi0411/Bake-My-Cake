@@ -21,7 +21,7 @@ export class LoginService {
     else {
       this.isAdminLoggedIn = true;
     }
-    this.userName = data[0].name;
+    this.userName = data[0].userName;
     this.role = data[0].role;
     this.email = data[0].email;
   }

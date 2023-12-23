@@ -20,7 +20,7 @@ export class RegisterComponent implements CanComponentDeactivate {
   passwordPattern: any = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
   registerForm = this.formbuilder.group({
-    userName: ['', [Validators.required, Validators.minLength(2)]],
+    userName: ['', [Validators.required, Validators.minLength(2),Validators.pattern(/^[a-zA-Z]+$/)]],
     password: ['', [Validators.required, Validators.pattern(this.passwordPattern)]],
     confirmPassword: ['', [Validators.required, Validators.pattern(this.passwordPattern)]],
     gender: [''],

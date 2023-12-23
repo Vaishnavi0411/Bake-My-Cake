@@ -3,6 +3,7 @@ import { Cake } from '../model/cake';
 import { CakeService } from '../services/cake.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CanComponentDeactivate } from '../services/cake.guard';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-cake',

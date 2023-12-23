@@ -12,6 +12,9 @@
           <mat-error class="error" *ngIf="userName?.errors?.['minlength']">
             Minimum 2 characters required
           </mat-error>
+          <mat-error class="error" *ngIf="userName?.errors?.['pattern']">
+            Only alphabets are allowed
+          </mat-error>
         </mat-form-field>
       </div>
 

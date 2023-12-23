@@ -8,9 +8,11 @@
         <p class="total">Total: ₹{{ mycake.total }}</p>
 
         <mat-form-field class="full-width">
-          <input matInput [(ngModel)]="myorder.orderDate" [matDatepicker]="picker" placeholder="Order Date">
+          <input matInput [(ngModel)]="myorder.orderDate" [matDatepicker]="picker" placeholder="Order Date"
+            name="orderDate" required>
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="isDateInPast()">Selected date cannot be in the past</mat-error>
         </mat-form-field>
 
         <form class="example-form">

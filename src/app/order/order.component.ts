@@ -47,7 +47,7 @@ export class OrderComponent implements OnInit {
     username: '',
     email: ''
   };
-  orderDate: any;
+
 
   constructor(
     private cakeService: CakeService,
@@ -57,7 +57,15 @@ export class OrderComponent implements OnInit {
     private loginService: LoginService,
     private userService: UserService
   ) { }
+  myOrder: any = {
+    orderDate: null
+  };
 
+  isDateInPast(): boolean {
+    const currentDate = new Date();
+    const selectedDate = new Date(this.myOrder.orderDate);
+    return selectedDate < currentDate;
+  }
   ngOnInit(): void {
     this.activateRoute.paramMap.subscribe(params => {
       let cakeId = params.get("id") ?? 0;

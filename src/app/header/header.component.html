@@ -1,41 +1,33 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>My profile</mat-toolbar>
-    <br>
-    <mat-nav-list>
-      <a *ngIf="loginService.isUserLoggedIn||loginService.isAdminLoggedIn"> <span class="userName">Hey</span><br><span
-          class="nav-list">{{loginService.userName}}</span></a>
-      <a mat-list-item routerLink="home"> <mat-icon>home</mat-icon> Home</a>
-      <a *ngIf="loginService.isAdminLoggedIn==true && loginService.isUserLoggedIn==false" mat-list-item
-        routerLink="addCake"><mat-icon>add_circle_outline</mat-icon> Add Cake</a>
-      <a *ngIf="loginService.isAdminLoggedIn==true && loginService.isUserLoggedIn==false" mat-list-item
-        routerLink="orderHistory"><mat-icon>history </mat-icon> Order History</a>
-        <a *ngIf="loginService.isAdminLoggedIn==false && loginService.isUserLoggedIn==true" mat-list-item [routerLink]="'/viewOneCake/' + mycake.id + '/order'+'/user-order'">
-          <mat-icon>history</mat-icon> Order History </a>
-      <a *ngIf="!loginService.isUserLoggedIn&&!loginService.isAdminLoggedIn" mat-list-item routerLink="login">
-        <mat-icon>account_circle</mat-icon> Login</a>
-      <a *ngIf="loginService.isUserLoggedIn||loginService.isAdminLoggedIn" mat-list-item (click)="logout()" routerLink="login">
-        <mat-icon>logout</mat-icon> LogOut</a>
-    </mat-nav-list>
-
-  </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar id="header">
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
       <div id="logo">
-        <img src="../assets/images/logo.png" alt="rating" width="7%" />
-        <span class="h1tag">The Cake Haven</span>
+        <img routerLink="home" src="../assets/images/logo.png" alt="rating" width="7%" />
+        <span class="h1tag">The Cake Heaven</span>
       </div>
       <div>
-        <mat-icon *ngIf="loginService.isAdminLoggedIn==true && loginService.isUserLoggedIn==false" class="divtag"
-          routerLink="addCake">add_circle_outline</mat-icon>
-        <mat-icon class="divtag" routerLink="home">home</mat-icon>
-        <mat-icon *ngIf="!loginService.isUserLoggedIn&&!loginService.isAdminLoggedIn" class="divtag"
-          routerLink="login">account_box</mat-icon>
-      </div>
+      <button class="mat-button" mat-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon> </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngIf="loginService.isUserLoggedIn||loginService.isAdminLoggedIn"> <span
+            class="userName">Hey</span><br><span class="nav-list">{{loginService.userName}}</span> </button>
+
+        <button mat-menu-item *ngIf="loginService.isAdminLoggedIn==true && loginService.isUserLoggedIn==false"
+          routerLink="addCake"><mat-icon>add_circle_outline</mat-icon> Add Cake </button>
+
+        <button mat-menu-item *ngIf="loginService.isAdminLoggedIn==true && loginService.isUserLoggedIn==false"
+          routerLink="orderHistory"><mat-icon>history </mat-icon> Order History </button>
+
+        <button mat-menu-item *ngIf="loginService.isAdminLoggedIn==false && loginService.isUserLoggedIn==true"
+          [routerLink]="'/viewOneCake/' + mycake.id + '/order'+'/user-order'">
+          <mat-icon>history</mat-icon> Order History </button>
+
+        <button mat-menu-item *ngIf="!loginService.isUserLoggedIn&&!loginService.isAdminLoggedIn" routerLink="login">
+          <mat-icon>account_circle</mat-icon> login </button>
+
+        <button mat-menu-item *ngIf="loginService.isUserLoggedIn||loginService.isAdminLoggedIn" routerLink="login"
+          (click)="logout()"> <mat-icon>logout</mat-icon> logout</button>
+      </mat-menu>
+    </div>
     </mat-toolbar>
 
     <router-outlet></router-outlet>

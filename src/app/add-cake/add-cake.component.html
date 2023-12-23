@@ -6,7 +6,7 @@
           <h3>Cake Information</h3>
           <div *ngIf="isEditCake">
             <mat-form-field>
-              <input matInput type="text" placeholder="Enter cake ID" name="id" [(ngModel)]="mycake.id" required>
+              <input matInput type="text" placeholder="Enter cake ID" name="id" [(ngModel)]="mycake.id" required readonly>
               <mat-error
                 *ngIf="addcake.form.controls['id'].invalid && (addcake.form.controls['id'].dirty || addcake.form.controls['id'].touched)">
                 Cake ID is required

@@ -9,10 +9,6 @@ export class SearchComponent {
   searchText: string = '';
   @Output()
   searchedText: EventEmitter<string> = new EventEmitter<string>();
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   search() {
     this.searchedText.emit(this.searchText);

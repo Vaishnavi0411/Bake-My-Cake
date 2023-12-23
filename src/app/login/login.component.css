@@ -10,6 +10,7 @@
   width: 25%;
   margin-top: 3%;
   margin-bottom: 7%;
+  text-align: center;
 }
 
 .login-form div:last-child {
@@ -35,13 +36,8 @@ h3 {
   justify-content: center;
 }
 
-mat-card-content {
-  text-align: center;
-}
 
-mat-card-content button {
-  margin-left: 6%;
-}
+
 
 .cake-image {
   background-image: url('../../assets/images/background4.jpg');

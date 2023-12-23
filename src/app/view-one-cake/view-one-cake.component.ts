@@ -13,9 +13,6 @@ export class ViewOneCakeComponent {
 
   mycake: Cake = {};
 
-  cakeRequest: any;
-  cake: any;
-  minDate: any;
   constructor(private cakeService: CakeService, private activateRoute: ActivatedRoute,public loginService: LoginService) { }
 
   ngOnInit(): void {
