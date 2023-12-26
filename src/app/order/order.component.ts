@@ -17,6 +17,7 @@ import { UserService } from '../services/user.service';
 })
 
 export class OrderComponent implements OnInit {
+  minDate: Date = new Date();
 
   myorder: cakeOrder = {
     cakeid: 0,
@@ -61,11 +62,6 @@ export class OrderComponent implements OnInit {
     orderDate: null
   };
 
-  isDateInPast(): boolean {
-    const currentDate = new Date();
-    const selectedDate = new Date(this.myOrder.orderDate);
-    return selectedDate < currentDate;
-  }
   ngOnInit(): void {
     this.activateRoute.paramMap.subscribe(params => {
       let cakeId = params.get("id") ?? 0;
